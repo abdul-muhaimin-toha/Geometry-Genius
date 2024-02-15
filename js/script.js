@@ -13,11 +13,11 @@ const clearBtnElement = document.getElementById('clear-btn');
 
 for (const cardElement of cardElements) {
   cardElement.addEventListener('mouseenter', function (event) {
-    event.target.classList.toggle('bg-[#1090D81A]');
+    event.target.classList.add('bg-[#1090D81A]');
   });
 
   cardElement.addEventListener('mouseleave', function (event) {
-    event.target.classList.toggle('bg-[#1090D81A]');
+    event.target.classList.remove('bg-[#1090D81A]');
   });
 }
 
