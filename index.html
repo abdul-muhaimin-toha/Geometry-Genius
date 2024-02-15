@@ -12,7 +12,299 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body class="font-inter">
+    <!-- Container Div -->
+    <div class="md:w-11/12 w-full mx-auto p-2">
+      <header>
+        <!-- Navigation Bar -->
+        <nav
+          class="navbar bg-[#1090D81A] px-4 py-1 md:px-6 Md:py-2 rounded-md dark:bg-white"
+        >
+          <div class="flex-1">
+            <a
+              class="cursor-pointer font-bold text-2xl md:text-3xl dark:text-slate-900"
+            >
+              Geometry Genius
+            </a>
+          </div>
+          <div class="flex-none">
+            <div class="menu menu-horizontal px-1">
+              <a
+                href="#"
+                class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] px-6 border-none"
+                >Blog</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <!-- Main Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <!-- Area Geometry Card -->
+          <section
+            class="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
+            <!-- Geometry Card Triangle -->
+            <div
+              class="geometry-card card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <img
+                src="images/triangle.png"
+                alt="Triangle"
+                class="w-3/4 h-2/4"
+              />
+              <!-- Card Details -->
+              <div class="flex flex-col items-center gap-2 text-center w-full">
+                <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                  Triangle
+                </h2>
+                <p class="text-lg">Area (A) = 0.5 X b X h</p>
+                <!-- Input Fields Container -->
+                <div class="flex justify-between items-center gap-3">
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </div>
+                <button
+                  id="triangle-btn"
+                  class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+            <!-- Geometry Card Rectangle -->
+            <div
+              class="geometry-card card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <img
+                src="images/rectangle.png"
+                alt="Triangle"
+                class="w-3/4 h-2/4"
+              />
+              <!-- Card Details -->
+              <div class="flex flex-col items-center gap-2 text-center w-full">
+                <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                  Rectangle
+                </h2>
+                <p class="text-lg">Area (A) = w X l</p>
+                <!-- Input Fields Container -->
+                <div class="flex justify-between items-center gap-3">
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="w"
+                  />
+                  <span>cm</span>
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="l"
+                  />
+                  <span>cm</span>
+                </div>
+                <button
+                  class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+            <!-- Geometry Card Parallelogram -->
+            <div
+              class="geometry-card card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <img
+                src="images/Parallelogram.png"
+                alt="Triangle"
+                class="w-3/4 h-2/4"
+              />
+              <!-- Card Details -->
+              <div class="flex flex-col items-center gap-2 text-center w-full">
+                <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                  Parallelogram
+                </h2>
+                <p class="text-lg">Area (A) = b X h</p>
+                <!-- Input Fields Container -->
+                <div class="flex justify-between items-center gap-3">
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </div>
+                <button
+                  class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+            <!-- Geometry Card Rhombus -->
+            <div
+              class="geometry-card card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <img
+                src="images/Rhombus.png"
+                alt="Triangle"
+                class="w-3/4 h-2/4"
+              />
+              <!-- Card Details -->
+              <div class="flex flex-col items-center gap-2 text-center w-full">
+                <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                  Rhombus
+                </h2>
+                <p class="text-lg">
+                  Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub>
+                </p>
+                <!-- Input Fields Container -->
+                <div class="flex justify-between items-center gap-3">
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="d1"
+                  />
+                  <span>cm</span>
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="d2"
+                  />
+                  <span>cm</span>
+                </div>
+                <button
+                  class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+            <!-- Geometry Card Pentagon -->
+            <div
+              class="geometry-card card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <img
+                src="images/Pentagon.png"
+                alt="Triangle"
+                class="w-3/4 h-2/4"
+              />
+              <!-- Card Details -->
+              <div class="flex flex-col items-center gap-2 text-center w-full">
+                <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                  Pentagon
+                </h2>
+                <p class="text-lg">Area (A) = 0.5 X p X b</p>
+                <!-- Input Fields Container -->
+                <div class="flex justify-between items-center gap-3">
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="p"
+                  />
+                  <span>cm</span>
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+                </div>
+                <button
+                  class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+            <!-- Geometry Card Ellipse -->
+            <div
+              class="geometry-card card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <img
+                src="images/Ellipse.png"
+                alt="Triangle"
+                class="w-3/4 h-2/4"
+              />
+              <!-- Card Details -->
+              <div class="flex flex-col items-center gap-2 text-center w-full">
+                <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                  Ellipse
+                </h2>
+                <p class="text-lg">Area (A) = πab</p>
+                <!-- Input Fields Container -->
+                <div class="flex justify-between items-center gap-3">
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="a"
+                  />
+                  <span>cm</span>
+                  <input
+                    type="text"
+                    id=""
+                    class="p-2 w-2/4 rounded-sm bg-slate-100 dark:bg-slate-700"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+                </div>
+                <button
+                  class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Area Geometry Result -->
+          <section
+            class="row-start-1 row-span-1 md:col-span-2 lg:row-auto lg:col-span-1"
+          >
+            <!-- Result Container -->
+            <div
+              class="card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+            >
+              <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+                Area Calculation
+              </h2>
+
+              <button
+                class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] border-none mt-3"
+              >
+                Clear All
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
