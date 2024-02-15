@@ -118,6 +118,7 @@
                   <span>cm</span>
                 </div>
                 <button
+                  id="rectangle-btn"
                   class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
                 >
                   Calculate
@@ -157,6 +158,7 @@
                   <span>cm</span>
                 </div>
                 <button
+                  id="parallelogram-btn"
                   class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
                 >
                   Calculate
@@ -198,6 +200,7 @@
                   <span>cm</span>
                 </div>
                 <button
+                  id="rhombus-btn"
                   class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
                 >
                   Calculate
@@ -237,6 +240,7 @@
                   <span>cm</span>
                 </div>
                 <button
+                  id="pentagon-btn"
                   class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
                 >
                   Calculate
@@ -276,6 +280,7 @@
                   <span>cm</span>
                 </div>
                 <button
+                  id="ellipse-btn"
                   class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] w-full border-none mt-6"
                 >
                   Calculate
@@ -289,14 +294,19 @@
           >
             <!-- Result Container -->
             <div
-              class="card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-10 flex flex-col gap-8 items-center dark:border-slate-700"
+              class="card shadow-sm border-[#1111111A] border-[1px] rounded-sm p-6 flex flex-col gap-8 items-center dark:border-slate-700"
             >
-              <h2 class="text-[#414141] text-2xl font-bold dark:text-white">
+              <h2 class="text-[#414141] text-xl font-bold dark:text-white">
                 Area Calculation
               </h2>
+              <ol
+                id="result-container"
+                class="flex flex-col gap-2 self-start list-decimal px-6"
+              ></ol>
 
               <button
-                class="btn bg-[#1090D8] text-white text-lg font-bold hover:bg-[#1090D8F0] border-none mt-3"
+                id="clear-btn"
+                class="btn bg-[#1090D8] text-white font-bold hover:bg-[#1090D8F0] border-none mt-3"
               >
                 Clear All
               </button>
