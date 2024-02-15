@@ -1,5 +1,6 @@
 const cardElements = document.querySelectorAll('.geometry-card');
 const resultContainerElement = document.getElementById('result-container');
+const calculateBtnElements = document.querySelectorAll('.calculate-btn');
 
 const triangleBtnElement = document.getElementById('triangle-btn');
 const rectangleBtnElement = document.getElementById('rectangle-btn');
@@ -35,6 +36,29 @@ function getInputValueById(id) {
   return [value1, value2];
 }
 
+function areaCalculation(values, type) {
+  const [value1, value2] = values;
+
+  if (type === 'triangle') {
+    return Math.round(0.5 * value1 * value2);
+  }
+  if (type === 'rectangle') {
+    return Math.round(value1 * value2);
+  }
+  if (type === 'parallelogram') {
+    return Math.round(value1 * value2);
+  }
+  if (type === 'rhombus') {
+    return Math.round(0.5 * value1 * value2);
+  }
+  if (type === 'pentagon') {
+    return Math.round(0.5 * value1 * value2);
+  }
+  if (type === 'ellipse') {
+    return Math.round(Math.PI * value1 * value2);
+  }
+}
+
 function showAreaResultInUi(areaData, type) {
   const li = document.createElement('li');
   if (isNaN(areaData)) {
@@ -45,42 +69,51 @@ function showAreaResultInUi(areaData, type) {
   resultContainerElement.appendChild(li);
 }
 
-triangleBtnElement.addEventListener('click', function (event) {
-  const [value1, value2] = getInputValueById(event.target.id);
-  const area = Math.round(0.5 * value1 * value2);
-  showAreaResultInUi(area, 'Triangle');
-});
-
-rectangleBtnElement.addEventListener('click', function (event) {
-  const [value1, value2] = getInputValueById(event.target.id);
-  const area = Math.round(value1 * value2);
-  showAreaResultInUi(area, 'Rectangle');
-});
-
-parallelogramBtnElement.addEventListener('click', function (event) {
-  const [value1, value2] = getInputValueById(event.target.id);
-  const area = Math.round(value1 * value2);
-  showAreaResultInUi(area, 'Parallelogram');
-});
-
-rhombusBtnElement.addEventListener('click', function (event) {
-  const [value1, value2] = getInputValueById(event.target.id);
-  const area = Math.round(0.5 * value1 * value2);
-  showAreaResultInUi(area, 'Rhombus');
-});
-
-pentagonBtnElement.addEventListener('click', function (event) {
-  const [value1, value2] = getInputValueById(event.target.id);
-  const area = Math.round(0.5 * value1 * value2);
-  showAreaResultInUi(area, 'Pentagon');
-});
-
-ellipseBtnElement.addEventListener('click', function (event) {
-  const [value1, value2] = getInputValueById(event.target.id);
-  const area = Math.round(Math.PI * value1 * value2);
-  showAreaResultInUi(area, 'Ellipse');
-});
+for (const calculateBtnElement of calculateBtnElements) {
+  calculateBtnElement.addEventListener('click', function (event) {
+    const type = event.target.id.split('-')[0];
+    const [value1, value2] = getInputValueById(event.target.id);
+    const area = areaCalculation([value1, value2], type);
+    showAreaResultInUi(area, type.slice(0, 1).toUpperCase() + type.slice(1));
+  });
+}
 
 clearBtnElement.addEventListener('click', function (event) {
   event.target.parentNode.querySelector('#result-container').innerHTML = '';
 });
+
+// triangleBtnElement.addEventListener('click', function (event) {
+//   const [value1, value2] = getInputValueById(event.target.id);
+//   const area = Math.round(0.5 * value1 * value2);
+//   showAreaResultInUi(area, 'Triangle');
+// });
+
+// rectangleBtnElement.addEventListener('click', function (event) {
+//   const [value1, value2] = getInputValueById(event.target.id);
+//   const area = Math.round(value1 * value2);
+//   showAreaResultInUi(area, 'Rectangle');
+// });
+
+// parallelogramBtnElement.addEventListener('click', function (event) {
+//   const [value1, value2] = getInputValueById(event.target.id);
+//   const area = Math.round(value1 * value2);
+//   showAreaResultInUi(area, 'Parallelogram');
+// });
+
+// rhombusBtnElement.addEventListener('click', function (event) {
+//   const [value1, value2] = getInputValueById(event.target.id);
+//   const area = Math.round(0.5 * value1 * value2);
+//   showAreaResultInUi(area, 'Rhombus');
+// });
+
+// pentagonBtnElement.addEventListener('click', function (event) {
+//   const [value1, value2] = getInputValueById(event.target.id);
+//   const area = Math.round(0.5 * value1 * value2);
+//   showAreaResultInUi(area, 'Pentagon');
+// });
+
+// ellipseBtnElement.addEventListener('click', function (event) {
+//   const [value1, value2] = getInputValueById(event.target.id);
+//   const area = Math.round(Math.PI * value1 * value2);
+//   showAreaResultInUi(area, 'Ellipse');
+// });
